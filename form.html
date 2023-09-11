@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Проєктування та розробка веб-застосунків</h1>
+    <h2>Лабораторна робота №1</h2>
+    <h2>Виконав студент групи КН-31, Крищук І.І.</h2>
+    <h2>Варіант №5</h2>
+    <ul class="horizontal-menu">
+        <li><a href="lab1.html">На головну</a></li>
+    </ul>
+    <h2>Завдання</h2>
+    <ul class="list">Третя сторінка з формою повинна вміщувати наступну інформацію:
+        <li><q>шапку</q>, що містить ПІБ студента, номер групи і номер варіанту та
+            посилання для повернення на головну сторінку;</li>
+        <li>опис завдань відповідно до варіанту;</li>
+        <li>розроблену форму взаємодії з користувачем, дані у формі повинні бути
+            згруповані за певними категоріями. На формі обов‘язково повинна бути
+            кнопка відправлення даних.</li>
+    </ul>
+    <fieldset>
+        <legend>Фільм</legend>
+        <form action="save_movie.php" method="post" enctype="multipart/form-data">
+            <label for="film_name">Назва фільму:</label>
+            <input type="text" name="film_name" required><br>
+
+            <label for="genre">Жанр:</label>
+            <select name="genre" required>
+                <option value="unselected" disabled selected>Оберіть жанр</option>
+                <option value="драма">Драма</option>
+                <option value="комедія">Комедія</option>
+                <option value="екшн">Екшн</option>
+                <option value="детектив">Детектив</option>
+                <option value="історичний">Історичний</option>
+                <option value="документальний">Документальний</option>
+                <option value="фантастика">Фантастика</option>
+                <option value="фентезі">Фентезі</option>
+                <option value="трилер">Трилер</option>
+                <option value="кримінальний">Кримінал</option>
+            </select><br>
+
+            <label for="release_date">Дата виходу на екрани:</label>
+            <input type="date" name="release_date" required><br>
+
+            <label for="description">Опис фільму:</label>
+            <textarea name="description" rows="4" required></textarea><br>
+
+            <label for="poster">Картинка афіші:</label>
+            <input type="file" name="poster"  accept="image/*" required><br>
+
+            <label for="director_name">ПІБ режисера:</label>
+            <input type="text" name="director_name" required pattern="[A-Za-zА-Яа-яІіЇїЄє\s]+"><br>
+
+            <label for="director_birthdate">Дата народження режисера:</label>
+            <input type="date" name="director_birthdate" min="1933-01-01" max="2005-01-01"><br>
+
+            <label for="director_bio">Біографія режисера:</label>
+            <textarea name="director_bio" rows="4" required></textarea><br>
+
+            <label for="director_website">Посилання на веб-сайт режисера:</label>
+            <input type="url" name="director_website"><br>
+
+            <input type="submit" value="Зберегти">
+        </form>
+    </fieldset>
+</body>
+</html>
