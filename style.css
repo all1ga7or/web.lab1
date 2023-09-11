@@ -62,11 +62,17 @@ ul.list {
 .list li:hover {
     background-color: #baeb7e;
 }
+
+img {
+    display: block;
+    margin: 0 auto
+}
 /* Стиль для таблиці */
 table.table1 {
-    width: 100%;
+    max-width: 1200px;
     border-collapse: collapse;
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
 }
   
 .table1 caption {
@@ -118,7 +124,7 @@ fieldset {
     padding: 20px;
     margin: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 legend {
@@ -136,7 +142,7 @@ input[type="date"],
 input[type="url"],
 select,
 textarea {
-    width: 70%;
+    width: 90%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
